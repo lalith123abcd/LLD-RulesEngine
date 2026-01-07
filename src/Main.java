@@ -1,3 +1,4 @@
+import com.lld.ruleEnginne.RuleManagerRunner;
 import com.lld.ruleEnginne.models.Expense;
 import com.lld.ruleEnginne.models.ExpenseType;
 import com.lld.ruleEnginne.registry.RuleRegistry;
@@ -20,11 +21,8 @@ public class Main {
         expenses.add(new Expense("2", "1", 50.0, ExpenseType.RESTAURANT));
         expenses.add(new Expense("3", "1", 100.0, ExpenseType.RESTAURANT));
 
-        List<Violation> violations=new SimpleRuleEngine().evaluate(expenses, RuleRegistry.getExpenseRulesRegistry(),
-                RuleRegistry.getAllExpenseRulesRegistry(),RuleRegistry.getAllTripRulesRegistry());
+        RuleManagerRunner ruleManagerRunner = new RuleManagerRunner(new SimpleRuleEngine());
 
-        for(Violation violation:violations){
-            System.out.println(violation.getMessage());
-        }
+        ruleManagerRunner.run(expenses);
     }
 }
