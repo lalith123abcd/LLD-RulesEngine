@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface TripRule {
 
-    Optional<List<Violation>> check(List<Expense> e);
+    Optional<Violation> check(List<Expense> e);
 }
