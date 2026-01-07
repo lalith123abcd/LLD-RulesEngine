@@ -1,8 +1,8 @@
-package com.lld.ruleEnginne.rules.impl;
+package com.lld.ruleEnginne.services.rules.impl;
 
 import com.lld.ruleEnginne.models.Expense;
-import com.lld.ruleEnginne.rules.TripRule;
-import com.lld.ruleEnginne.rules.Violation;
+import com.lld.ruleEnginne.services.rules.TripRule;
+import com.lld.ruleEnginne.services.rules.Violation;
 import com.lld.ruleEnginne.utils.ExpenseUtils;
 
 import java.util.List;
@@ -30,6 +30,7 @@ public class TripTotalMaxRule implements TripRule {
            return Optional.of(new Violation("Trip total amount exceeds the maxAmount"));
 
        }
+        return Optional.empty();
 
     }
 }

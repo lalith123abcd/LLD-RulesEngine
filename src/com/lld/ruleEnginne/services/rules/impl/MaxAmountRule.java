@@ -1,8 +1,8 @@
-package com.lld.ruleEnginne.rules.impl;
+package com.lld.ruleEnginne.services.rules.impl;
 
 import com.lld.ruleEnginne.models.Expense;
-import com.lld.ruleEnginne.rules.ExpenseRule;
-import com.lld.ruleEnginne.rules.Violation;
+import com.lld.ruleEnginne.services.rules.ExpenseRule;
+import com.lld.ruleEnginne.services.rules.Violation;
 
 import java.util.Optional;
 

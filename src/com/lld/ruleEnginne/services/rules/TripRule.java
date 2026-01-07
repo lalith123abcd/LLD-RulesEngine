@@ -1,4 +1,4 @@
-package com.lld.ruleEnginne.rules;
+package com.lld.ruleEnginne.services.rules;
 
 import com.lld.ruleEnginne.models.Expense;
 
